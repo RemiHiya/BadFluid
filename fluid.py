@@ -1,21 +1,4 @@
 import numpy as np
-from numba import njit
-from numba import int32, float32, boolean    # import the types
-from numba.experimental import jitclass
-
-spec = [
-    ('width', int32),
-    ('height', int32),
-    ('dt', float32),
-    ('diffusion', float32),
-    ('viscosity', float32),
-    ('s', float32[:]),
-    ('density', float32[:]),
-    ('Vx', float32[:]),
-    ('Vy', float32[:]),
-    ('Vx0', float32[:]),
-    ('Vy0', float32[:])
-]
 
 class Fluid:
     def __init__(self, width, height, diffusion, viscosity, dt):
