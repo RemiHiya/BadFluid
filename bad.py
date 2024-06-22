@@ -8,5 +8,9 @@ class Bad:
         self.screen = screen
         self.rate = rate
     
+    def next(self):
+        self.frame += 1
+        self.time += self.rate
+
     def render(self):
         pass
