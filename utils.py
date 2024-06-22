@@ -5,8 +5,6 @@ import colorsys
 
 def process_frame(frame, scale):
     resized_frame = cv2.resize(frame, (0, 0), fx=scale, fy=scale)
-
-    # Convertir l'image en niveaux de gris
     gray_frame = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2GRAY)
 
     # Appliquer un seuillage pour obtenir une image binaire
